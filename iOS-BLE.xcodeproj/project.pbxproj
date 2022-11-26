@@ -13,6 +13,8 @@
 		041C3D182932087B00C742D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041C3D162932087B00C742D5 /* Main.storyboard */; };
 		041C3D1A2932087C00C742D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041C3D192932087C00C742D5 /* Assets.xcassets */; };
 		041C3D1D2932087C00C742D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041C3D1B2932087C00C742D5 /* LaunchScreen.storyboard */; };
+		046F119229320B20000AD335 /* BluetoothViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F119129320B20000AD335 /* BluetoothViewModel.swift */; };
+		046F119429320B4A000AD335 /* PeripheralsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F119329320B4A000AD335 /* PeripheralsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		041C3D192932087C00C742D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041C3D1C2932087C00C742D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		041C3D1E2932087C00C742D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046F119129320B20000AD335 /* BluetoothViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewModel.swift; sourceTree = "<group>"; };
+		046F119329320B4A000AD335 /* PeripheralsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				041C3D192932087C00C742D5 /* Assets.xcassets */,
 				041C3D1B2932087C00C742D5 /* LaunchScreen.storyboard */,
 				041C3D1E2932087C00C742D5 /* Info.plist */,
+				046F119129320B20000AD335 /* BluetoothViewModel.swift */,
+				046F119329320B4A000AD335 /* PeripheralsList.swift */,
 			);
 			path = "iOS-BLE";
 			sourceTree = "<group>";
@@ -139,7 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				041C3D152932087B00C742D5 /* ViewController.swift in Sources */,
+				046F119229320B20000AD335 /* BluetoothViewModel.swift in Sources */,
 				041C3D112932087B00C742D5 /* AppDelegate.swift in Sources */,
+				046F119429320B4A000AD335 /* PeripheralsList.swift in Sources */,
 				041C3D132932087B00C742D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +303,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +332,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
