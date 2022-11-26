@@ -15,6 +15,7 @@
 		041C3D1D2932087C00C742D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041C3D1B2932087C00C742D5 /* LaunchScreen.storyboard */; };
 		046F119229320B20000AD335 /* BluetoothViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F119129320B20000AD335 /* BluetoothViewModel.swift */; };
 		046F119429320B4A000AD335 /* PeripheralsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F119329320B4A000AD335 /* PeripheralsList.swift */; };
+		046F1196293232E5000AD335 /* DeviceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F1195293232E5000AD335 /* DeviceResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		041C3D1E2932087C00C742D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046F119129320B20000AD335 /* BluetoothViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewModel.swift; sourceTree = "<group>"; };
 		046F119329320B4A000AD335 /* PeripheralsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralsList.swift; sourceTree = "<group>"; };
+		046F1195293232E5000AD335 /* DeviceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				041C3D1E2932087C00C742D5 /* Info.plist */,
 				046F119129320B20000AD335 /* BluetoothViewModel.swift */,
 				046F119329320B4A000AD335 /* PeripheralsList.swift */,
+				046F1195293232E5000AD335 /* DeviceResult.swift */,
 			);
 			path = "iOS-BLE";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				041C3D152932087B00C742D5 /* ViewController.swift in Sources */,
 				046F119229320B20000AD335 /* BluetoothViewModel.swift in Sources */,
+				046F1196293232E5000AD335 /* DeviceResult.swift in Sources */,
 				041C3D112932087B00C742D5 /* AppDelegate.swift in Sources */,
 				046F119429320B4A000AD335 /* PeripheralsList.swift in Sources */,
 				041C3D132932087B00C742D5 /* SceneDelegate.swift in Sources */,
