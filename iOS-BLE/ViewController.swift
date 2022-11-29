@@ -12,12 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         let peripheralsList = PeripheralsList()
         let hostView = UIHostingController(rootView: peripheralsList)
         hostView.view.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(hostView.view)
-        
+
         let constraints = [
             hostView.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             hostView.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),

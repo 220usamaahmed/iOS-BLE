@@ -25,7 +25,9 @@ extension BluetoothViewModel: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
             self.centralManager?.scanForPeripherals(
-                withServices: [CBUUID(string: "FFE0"), CBUUID(string: "CD80"), CBUUID(string: "FFF0")],
+                withServices: [
+                    CBUUID(string: "FFB0"),
+                    CBUUID(string: "FFE0"), CBUUID(string: "CD80"), CBUUID(string: "FFF0")],
                 // withServices: nil,
                 options: [CBCentralManagerScanOptionAllowDuplicatesKey: false]
             )
@@ -36,9 +38,16 @@ extension BluetoothViewModel: CBCentralManagerDelegate {
         if !peripherals.contains(peripheral) {
             self.peripherals.append(peripheral)
             
-            print("🔵 Peripheral discovered: \(peripheral.name ?? "Nameless peripheral"), trying to connect")
+            print("🔵 Peripheral discovered: \(peripheral.identifier), \(peripheral.name ?? "Nameless Device")")
             // printPeripheralCharacteristics(peripheral: peripheral)
-            connectToPeripheral(peripheral: peripheral)
+            // connectToPeripheral(peripheral: peripheral)
+            
+            // if true {
+            // if peripheral.identifier.uuidString == "74596AB7-58E4-DBBC-0966-DDEDA6594F85" {
+            // if peripheral.identifier.uuidString == "05DA4B40-1605-F411-76A4-9D3EAFFD8C7C" {
+            if peripheral.identifier.uuidString == "8166D820-4242-C386-11D9-5117AB809FCA" {
+                self.centralManager?.connect(peripheral)
+            }
         
             if let peripheralName = peripheral.name {
                 self.peripheralNames.append(peripheralName)
@@ -50,7 +59,7 @@ extension BluetoothViewModel: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        print("🤝 Connection established with peripheral")
+        print("🤝 Connection established with peripheral \(peripheral.name ?? "Nameless Device")")
         
         peripheral.delegate = self
         peripheral.discoverServices(nil)
@@ -65,10 +74,6 @@ extension BluetoothViewModel: CBCentralManagerDelegate {
                 print("\tCharacteristic: \(characteristic.description)")
             }
         }
-    }
-    
-    private func connectToPeripheral(peripheral: CBPeripheral) {
-        self.centralManager?.connect(peripheral)
     }
 }
 
@@ -105,6 +110,11 @@ extension BluetoothViewModel: CBPeripheralDelegate {
         
         let bytes = [UInt8](value)
         
-        
+        let weight = Double((UInt16(bytes[2]) << 8) + UInt16(bytes[3])) / 100.0
+        print("\(characteristic.uuid): \(bytes) ---> Weight: \(weight)")
+    }
+    
+    private func decodeFrame(data: [UInt8]) {
+    
     }
 }
